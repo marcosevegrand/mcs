@@ -1,0 +1,20 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: msc-web:latest
+    container_name: msc-web
+    restart: unless-stopped
+    expose:
+      - "80"
+    networks:
+      - web_network
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+networks:
+  web_network:
+    external: true

@@ -1,0 +1,10 @@
+# Replace with your real domain, copy to VPS as Caddyfile snippet.
+# Quartz outputs plain static files to public/ — just file_server, no rewrites.
+# Deploy dir on VPS: /srv/cybersec-notes-site (git clone here).
+# On update: git pull, then `npx quartz build` (needs Node 22+ on the VPS).
+
+notes.example.com {
+	root * /srv/cybersec-notes-site/public
+	file_server
+	encode gzip
+}

@@ -1,0 +1,1 @@
+Este explica os [Slides 01](ano-1/sem-1/ascn/teoricas/slides-01.pdf)

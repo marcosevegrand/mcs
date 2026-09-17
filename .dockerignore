@@ -1,0 +1,12 @@
+node_modules
+public
+.git
+.gitignore
+.quartz
+.quartz-cache
+.obsidian
+quartz/.quartz-cache
+prof
+tsconfig.tsbuildinfo
+README.md
+Caddyfile.example
