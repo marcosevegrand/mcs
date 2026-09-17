@@ -16,9 +16,9 @@ Page titles come from frontmatter `title:` (Quartz falls back to the filename ot
 
 ## Deploy
 - Site: https://mcs.marcosev.com
-- VPS: `ssh msc-vps` (key `~/.ssh/msc_vps`, alias in `~/.ssh/config`); project at `/opt/projects/msc`
-- Redeploy: `powershell -ExecutionPolicy Bypass -File deploy/update.ps1`
-- Manual: `docker compose build && docker compose up -d` in `/opt/projects/msc`
+- VPS: `ssh msc-vps` (key `~/.ssh/msc_vps`, alias in `~/.ssh/config`); project at `/opt/projects/msc` (git clone of this repo)
+- Redeploy: `powershell -ExecutionPolicy Bypass -File deploy/update.ps1` (pulls `origin/master` on the VPS, then `docker compose build && docker compose up -d`)
+- Manual: `git pull && docker compose build && docker compose up -d` in `/opt/projects/msc`
 
 ### Ops notes
 - Edit content in Obsidian/an editor, **not** with PowerShell 5.1 `Get-Content`/`Set-Content` — it reads UTF-8 as ANSI and double-encodes accented characters.
